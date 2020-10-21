@@ -1,0 +1,24 @@
+database:
+  driver: com.mysql.jdbc.Driver                      #数据库驱动
+  uri: jdbc:mysql://pc-bp1lsgy6vl6yrrl81-test.rwlb.rds.aliyuncs.com/qa_mantis_prmt  #数据库地址
+  username: naxin                                     #用户名
+  password: vIbj2OT9i0OGs9tX                                 #用户密码
+
+packages:
+  model:
+    name: com.cycas.pojo                     #生成model所在的包
+    target: src/main/java  #生成model文件的目录
+  dao:
+    name: com.cycas.mapper                       #生成dao层文件
+    target: src/main/java                             #生成dao文件所在的目录
+  mapper:
+    name: com.cycas.mapper                                      #生成mapper层文件
+    target: src/main/resources                        #生成mapper文件所在的目录
+
+tableConfigurations:
+  - name: change_class_params                            #table名称
+    enableSelect: true                               #是否生成select sql,其他sql有待更新 可选填写（true|false）
+    enableInsert: true
+    enableUpdate: true
+    enableDelete: true
+
